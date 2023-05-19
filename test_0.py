@@ -1,9 +1,17 @@
 import streamlit as st
-st.text('hello, world')
-st.text('hellooooooooooooooooo, world')
 
-st.form('my_form_identifier')
-st.form_submit_button('Submit to me')
-st.container()
-col1, col2 = st.columns(2)
-col1.subheader('Columnisation')
+def main():
+    st.title("Đăng nhập")
+
+    username = st.text_input("Tên người dùng")
+    password = st.text_input("Mật khẩu", type="password")
+
+    if st.button("Đăng nhập"):
+        if username == "admin" and password == "password":
+            st.success("Đăng nhập thành công")
+            # Thực hiện các hành động sau khi đăng nhập thành công
+        else:
+            st.error("Tên người dùng hoặc mật khẩu không chính xác")
+
+if __name__ == "__main__":
+    main()
