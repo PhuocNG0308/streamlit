@@ -2,6 +2,7 @@ import streamlit as st
 
 def main():
     # Biến trạng thái
+    global logged_in 
     logged_in = False
 
     # Panel đăng nhập
