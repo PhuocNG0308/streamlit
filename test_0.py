@@ -41,8 +41,4 @@ def show_menu():
         st.write("Đang xử lý tác vụ 3...")
 
 if __name__ == "__main__":
-    while True:
-        main()
-        # Làm mới giao diện sau mỗi lần lặp
-        time.sleep(1)
-        st.experimental_rerun()
+    main()
