@@ -1,12 +1,9 @@
 import streamlit as st
+import time
 
 def main():
     # Biến trạng thái
-    global logged_in 
     logged_in = False
-
-    sidebar =  st.sidebar.title("Panel bên")
-    st.sidebar.write("Đây là nội dung trong panel bên.")
 
     # Panel đăng nhập
     st.title("Đăng nhập")
@@ -24,12 +21,8 @@ def main():
     if logged_in:
         # Hiển thị menu thao tác
         show_menu()
-        st.set_page_config(layout="wide")
-
 
 def show_menu():
-    global logged_in
-
     st.title("Menu thao tác")
     st.write("Chọn một tác vụ từ menu bên dưới.")
 
@@ -46,8 +39,10 @@ def show_menu():
     elif selected_option == "Tác vụ 3":
         # Xử lý tác vụ 3
         st.write("Đang xử lý tác vụ 3...")
-    
-    st.write(logged_in)
 
 if __name__ == "__main__":
-    main()
+    while True:
+        main()
+        # Làm mới giao diện sau mỗi lần lặp
+        time.sleep(1)
+        st.experimental_rerun()
