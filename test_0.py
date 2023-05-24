@@ -5,7 +5,6 @@ import time
 def check_login(username, password):
     # Đọc dữ liệu từ file CSV
     csv_url = 'https://raw.githubusercontent.com/PhuocNG0308/streamlit/main/UserData.csv'
-    st.write("Checking")
     df = pd.read_csv(csv_url)
 
     # Kiểm tra username và password
@@ -33,7 +32,9 @@ def main():
 
     # Kiểm tra trạng thái đăng nhập
     if logged_in:
-        st.write("Bruh!!")
+        st.write("Đăng nhập thành công")
+    else:
+        st.write("Tài khoản không tồn tại hoặc chưa được cấp quyền, liên hệ quản lý của bạn")
 
 if __name__ == "__main__":
     main()
