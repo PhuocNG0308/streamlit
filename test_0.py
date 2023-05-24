@@ -5,6 +5,7 @@ import time
 def check_login(username, password):
     # Đọc dữ liệu từ file CSV
     csv_url = 'https://raw.githubusercontent.com/PhuocNG0308/streamlit/main/UserData.csv'
+    st.write("Checking")
     df = pd.read_csv(csv_url)
 
     # Kiểm tra username và password
