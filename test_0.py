@@ -23,6 +23,8 @@ def main():
         show_menu()
 
 def show_menu():
+    global logged_in
+
     st.title("Menu thao tác")
     st.write("Chọn một tác vụ từ menu bên dưới.")
 
@@ -39,6 +41,8 @@ def show_menu():
     elif selected_option == "Tác vụ 3":
         # Xử lý tác vụ 3
         st.write("Đang xử lý tác vụ 3...")
+    
+    st.write(logged_in)
 
 if __name__ == "__main__":
     main()
