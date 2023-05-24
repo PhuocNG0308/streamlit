@@ -5,7 +5,7 @@ def main():
     global logged_in 
     logged_in = False
 
-    st.sidebar.title("Panel bên")
+    sidebar =  st.sidebar.title("Panel bên")
     st.sidebar.write("Đây là nội dung trong panel bên.")
 
     # Panel đăng nhập
@@ -24,6 +24,8 @@ def main():
     if logged_in:
         # Hiển thị menu thao tác
         show_menu()
+        st.set_page_config(layout="wide")
+
 
 def show_menu():
     global logged_in
