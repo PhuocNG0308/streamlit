@@ -5,6 +5,9 @@ def main():
     global logged_in 
     logged_in = False
 
+    st.sidebar.title("Panel bên")
+    st.sidebar.write("Đây là nội dung trong panel bên.")
+
     # Panel đăng nhập
     st.title("Đăng nhập")
     username = st.text_input("Tên đăng nhập")
