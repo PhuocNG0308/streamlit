@@ -1,6 +1,9 @@
 import streamlit as st
 
 def main():
+    # Biến trạng thái
+    logged_in = False
+
     # Panel đăng nhập
     st.title("Đăng nhập")
     username = st.text_input("Tên đăng nhập")
@@ -10,10 +13,13 @@ def main():
     if login_button:
         # Kiểm tra đăng nhập
         if username == "admin" and password == "password":
-            # Hiển thị menu thao tác
-            show_menu()
-        else:
-            st.error("Tên đăng nhập hoặc mật khẩu không chính xác.")
+            # Đăng nhập thành công, đặt biến trạng thái là True
+            logged_in = True
+
+    # Kiểm tra trạng thái đăng nhập
+    if logged_in:
+        # Hiển thị menu thao tác
+        show_menu()
 
 def show_menu():
     st.title("Menu thao tác")
