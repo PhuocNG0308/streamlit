@@ -4,7 +4,8 @@ import time
 
 def check_login(username, password):
     # Đọc dữ liệu từ file CSV
-    df = pd.read_csv('UserData.csv')
+    csv_url = 'https://github.com/PhuocNG0308/streamlit/blob/main/UserData.csv'
+    df = pd.read_csv(csv_url)
 
     # Kiểm tra username và password
     if username in df['username'].values and password in df['password'].values:
